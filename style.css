@@ -1,0 +1,40 @@
+
+/* Make navbar button look consistent in the header */
+.navbar button {
+  border: 2px solid #ffe5c2;
+  background: transparent;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.navbar button:hover { color: #ffe5c2; }
+
+/* Utility action buttons (Edit Job Title, Toggle Skills) */
+#editJobBtn, #toggleSkillsBtn {
+  border: 2px solid #8b5e34;
+  background: #fff7ef;
+  color: #4a3425;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#editJobBtn:hover, #toggleSkillsBtn:hover { background: #ffe5c2; }
+
+/* Optional small layout tweak for skills controls */
+.skills-controls { margin: 10px 0; }
+
+/* Dark mode palette (Task A) */
+body.dark-mode {
+  background-color: #1f1a16;
+  color: #f5e9dd;
+}
+.dark-mode .navbar { background-color: #3a2a1f; color: #fff; }
+.dark-mode .profile-img { border-color: #d6b289; }
+.dark-mode .skills-section,
+.dark-mode .experience-table { background-color: #2a2119; }
+.dark-mode .experience-table th,
+.dark-mode .experience-table td { border-color: #d6b289; }
+.dark-mode a { color: #ffd9a8; }
+.dark-mode .footer { background-color: #3a2a1f; }

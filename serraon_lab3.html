@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My Profile – Lab 3</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- External JS with defer (per instructions) -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="navbar">
+  <h2>
+    <a href="#home">Home</a> |
+    <a href="#about">About Me</a> |
+    <a href="#contact">Message Me</a>
+    <!-- Task A: Theme toggle button -->
+    | <button id="themeBtn" type="button">Toggle Dark Mode</button>
+  </h2>
+</header>
+
+<section id="main-content">
+  <!-- LEFT COLUMN -->
+  <div class="left-column">
+
+    <div id="home" class="profile-card">
+      <img
+        src="https://authapi.virtualstaff.ph/api/v1/file/download/667d0d41348ab4002bf543ba"
+        alt="Kurt Serraon Picture"
+        class="profile-img">
+      <h2 class="name">KURT RUSSELLE SERRAON</h2>
+
+      <p class="job-title">Customer Service • Virtual Assistant • Social Media Manager</p>
+      <!-- Task B: Edit job title button -->
+      <p><button id="editJobBtn" type="button">Edit Job Title</button></p>
+    </div>
+
+    <div class="contact-section">
+      <h3>Contact</h3>
+      <p>Phone: 09763427047</p>
+      <p>Email: <a href="mailto:kurt.kieh@gmail.com">kurt.kieh@gmail.com</a></p>
+      <p>Location: Quezon City, Philippines</p>
+    </div>
+
+    <!-- Task C + G hooks above Skills -->
+    <div class="skills-controls">
+      <p>
+        <button id="toggleSkillsBtn" type="button" aria-controls="skillsSection" aria-expanded="true">Hide Skills</button>
+      </p>
+      <!-- Task G: Live skills search -->
+      <p><input type="text" id="skillsSearch" placeholder="Type to filter skills…"></p>
+    </div>
+
+    <!-- Give your skills wrapper an id="skillsSection" as required -->
+    <div id="skillsSection" class="skills-section">
+      <h3>Skills</h3>
+      <dl>
+        <dt><strong>Professional Skills</strong></dt>
+        <dd>Social Media Management</dd>
+        <dd>Customer Service</dd>
+        <dd>Administrative Assistance</dd>
+        <dd>Programming</dd>
+        <dt><strong>Additional Skills</strong></dt>
+        <dd>Technical Support</dd>
+        <dd>Graphic Design</dd>
+        <dd>Content Creation</dd>
+        <dd>Time Management</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div class="right-column">
+    <div id="about" class="about-section">
+      <h2>About Me</h2>
+      <p>
+        Hi! I’m <strong>Kurt Russelle Serraon</strong>, an aspiring IT professional with strong experience in customer service,
+        technical support, virtual assistance, and social media management.
+      </p>
+      <p>
+        I am passionate about learning, improving my skills, and using technology to deliver high-quality work. With a background
+        in communication, multitasking, and digital operations, I aim to build a successful career that combines technology and service.
+      </p>
+    </div>
+
+    <div class="experience-section">
+      <h2>Experience</h2>
+      <table class="experience-table">
+        <tr>
+          <th>Position</th>
+          <th>Company</th>
+          <th>Year</th>
+        </tr>
+        <tr>
+          <td>Social Media Manager</td>
+          <td>Human Growth Foundation</td>
+          <td>2024–2025</td>
+        </tr>
+        <tr>
+          <td>Customer Service Representative</td>
+          <td>Everise</td>
+          <td>2023–2024</td>
+        </tr>
+        <tr>
+          <td>Virtual Assistant</td>
+          <td>Goldensteer</td>
+          <td>2022–2023</td>
+        </tr>
+        <tr>
+          <td>Technical Support Representative</td>
+          <td>Teleperformance</td>
+          <td>2022</td>
+        </tr>
+        <tr>
+          <td>Customer Service Representative</td>
+          <td>Concentrix</td>
+          <td>2020–2022</td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="contact" class="message-form">
+      <h2>Message Me</h2>
+      <form>
+        <p>Name:<br><input type="text" id="nameField"></p>
+        <p>Email:<br><input type="email" id="emailField"></p>
+        <!-- Task D: maxlength + counter -->
+        <p>Message:<br><textarea id="msgBox" rows="4" maxlength="200"></textarea></p>
+        <p>Characters left: <span id="counter">200</span></p>
+
+        <!-- Task E: onclick validateForm per PDF -->
+        <p><input type="submit" value="Send" onclick="return validateForm()"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  WebProg - Web Programming 2025
+  <!-- Task F: where JS will write today's date -->
+  <p id="dateDisplay"></p>
+</footer>
+</body>
+</html>
